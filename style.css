@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+#hero {
+  color: white;
+  background-image: url(Assets/796169491973.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 10%;
+}
+#hero #header-hero h1 {
+  font-size: 6rem;
+  text-align: center;
+}
+#hero #inner-hero {
+  display: flex;
+  flex-wrap: wrap;
+}
+#hero #inner-hero #slika {
+  width: 50%;
+  padding: 5% 10%;
+}
+#hero #inner-hero #slika img {
+  width: 100%;
+  height: auto;
+  border: 0.5rem dashed white;
+}
+#hero #inner-hero #about-to-contact {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#hero #inner-hero #about-to-contact p {
+  font-size: 2rem;
+}
+#hero #inner-hero #about-to-contact .btn {
+  margin: 2rem;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Courier New;
+  color: #ff0000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #9e0000 2px;
+  text-decoration: none;
+  background-color: black;
+  transition: transform 0.5s;
+}
+#hero #inner-hero #about-to-contact .btn:hover {
+  transform: scale(1.1);
+}
+
+section {
+  width: 100%;
+  padding: 0% 5% 2% 5%;
+}
+section h2 {
+  margin-top: 1rem;
+  font-size: 5rem;
+}
+
+#services #services-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#services #services-flex h2 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 5rem;
+  color: #000000;
+  width: 100%;
+}
+#services #services-flex .service-box {
+  width: 24%;
+  margin: 1rem 0;
+  height: 20rem;
+  background-color: #000000;
+}
+
+#projects #projects-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#projects #projects-flex div {
+  margin: 0.5rem 0;
+  width: 49%;
+  height: 20rem;
+  background-color: #000000;
+}
+
+.Contact {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+.Contact #kontakt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.Contact #kontakt form #inp-ime {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 1px solid #191919;
+}
+.Contact #kontakt form #inp-prezime {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 1px solid #191919;
+}
+.Contact #kontakt form #inp-email {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 1px solid #191919;
+}
+.Contact #kontakt form #inp-textarea {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 1rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #191919;
+}
+.Contact #kontakt form input::-moz-placeholder {
+  color: #393939;
+  padding-left: 0.8rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.Contact #kontakt form input::placeholder {
+  color: #393939;
+  padding-left: 0.8rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.Contact #kontakt form textarea::-moz-placeholder {
+  padding-top: 0.8rem;
+  color: #393939;
+  padding-left: 0.8rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.Contact #kontakt form textarea::placeholder {
+  padding-top: 0.8rem;
+  color: #393939;
+  padding-left: 0.8rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.Contact #kontakt form #inp-submit {
+  padding: 0 2rem;
+  height: 3rem;
+  background-color: #ababab;
+  font-family: "Russo One", sans-serif;
+  font-size: 1.5rem;
+}
+.Contact #info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Contact #info2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  #services #services-flex .service-box {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #hero {
+    padding: 3%;
+  }
+  #hero #inner-hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero #inner-hero #about-to-contact {
+    width: 100%;
+  }
+  #services #services-flex {
+    flex-direction: column;
+  }
+  #services #services-flex .service-box {
+    width: 100%;
+  }
+  #projects #projects-flex div {
+    width: 100%;
+  }
+  .Contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Contact #kontakt {
+    width: 100%;
+  }
+  .Contact #info {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
