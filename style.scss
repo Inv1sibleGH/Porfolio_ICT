@@ -7,6 +7,10 @@ $divboja: rgb(18, 18, 18);
     box-sizing: border-box;
     
 }
+a{
+    text-decoration: none;
+    color: black; 
+}
 body{
     font-family: "Ubuntu", sans-serif;
 }
@@ -96,32 +100,75 @@ section{
         .service-box{
             width: 24%;   
             margin: 1rem 0; 
-            height: 20rem; 
             background-color: $divboja; 
             border: 5px outset #9e0000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h3{
+                text-align: center;
+                font-size: 3rem;
+                margin: 2rem 1rem;
+                color: white;
+            }
+            i{
+                font-size: 5rem;
+                margin: 1rem 0;
+                color: white;
+            }
+            p{
+                text-align: center;
+                font-size: 1.5rem;
+                margin: 2rem 5%;
+                color: white;
+            }
         }
     }
 }
-#projects{
+#projects{ 
     #projects-flex{
+        width: 100%;
         display:flex;
-        flex-wrap: wrap;
+        flex-direction: row; 
         justify-content: space-between;
-        div{
+        .projects-containers{ 
             margin: 0.5rem 0;  
-            width: 49%;
-            height: 20rem; 
+            width: 98%;
             background-color: $divboja;
             border: 5px outset #9e0000;
+            position: relative;
+                img{
+                    width: 100%;
+                    height: auto;
+                } 
+            .bg-filter{
+                position: absolute;
+                bottom: 0; 
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(0deg,#101010,rgba(25,25,25,0));
+                h3{
+                    font-size: 1.5rem;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    margin-bottom: 2%;
+                    text-align: center;
+                    color: white;
+                }
+            }
         }
     }
 }
-.Contact{
+.Contactt{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row; 
-    align-items:start; 
-    #kontakt{
+    .kontakt{
         width: 50%;
+        height: 100%;
         display: flex;
         flex-direction: column; 
         form{
@@ -173,20 +220,15 @@ section{
             }
         }
     }
-    #info{
+    .kontakt2{ 
         width: 50%; 
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
-    }
-    #info2{ 
-        width: 100%; 
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 1.5rem;
+        }
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -198,7 +240,7 @@ section{
         }
     }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
     #hero{ 
         padding: 3%;
         #inner-hero{
@@ -209,31 +251,37 @@ section{
             }
         }
     } 
+    .Contactt{
+        .kontakt2{
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    
     #services{
         #services-flex{
-            flex-direction: column;
+            flex-direction: column; 
             .service-box{
                 width: 100%;  
             }
         }
     }
-    #projects{
+    #projects{ 
         #projects-flex{
-            div{
-                width: 100%; 
-            }
+            flex-direction: column; 
         }
     }
-    .Contact{
+    .Contactt{
         flex-direction: column;
-        align-items: center; 
-        #kontakt{
-            width: 100%;
+        align-items: center;  
+        .kontakt{
+            width: 100%; 
         }
-        #info{
-            justify-content: center;
-            text-align: center; 
+        .kontakt2{ 
             width: 100%;
-        }
+        } 
     }
 }

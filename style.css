@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
 }
@@ -91,104 +96,143 @@ section h2 {
 #services #services-flex .service-box {
   width: 24%;
   margin: 1rem 0;
-  height: 20rem;
   background-color: rgb(18, 18, 18);
   border: 5px outset #9e0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#services #services-flex .service-box h3 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 1rem;
+  color: white;
+}
+#services #services-flex .service-box i {
+  font-size: 5rem;
+  margin: 1rem 0;
+  color: white;
+}
+#services #services-flex .service-box p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem 5%;
+  color: white;
 }
 
 #projects #projects-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-#projects #projects-flex div {
-  margin: 0.5rem 0;
-  width: 49%;
-  height: 20rem;
-  background-color: rgb(18, 18, 18);
-  border: 5px outset #9e0000;
-}
-
-.Contact {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  justify-content: space-between;
 }
-.Contact #kontakt {
+#projects #projects-flex .projects-containers {
+  margin: 0.5rem 0;
+  width: 98%;
+  background-color: rgb(18, 18, 18);
+  border: 5px outset #9e0000;
+  position: relative;
+}
+#projects #projects-flex .projects-containers img {
+  width: 100%;
+  height: auto;
+}
+#projects #projects-flex .projects-containers .bg-filter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #101010, rgba(25, 25, 25, 0));
+}
+#projects #projects-flex .projects-containers .bg-filter h3 {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 2%;
+  text-align: center;
+  color: white;
+}
+
+.Contactt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.Contactt .kontakt {
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
-.Contact #kontakt form #inp-ime {
+.Contactt .kontakt form #inp-ime {
   width: 100%;
   height: 2rem;
   margin-bottom: 1rem;
   background-color: white;
   border: 1px solid #191919;
 }
-.Contact #kontakt form #inp-prezime {
+.Contactt .kontakt form #inp-prezime {
   width: 100%;
   height: 2rem;
   margin-bottom: 1rem;
   background-color: white;
   border: 1px solid #191919;
 }
-.Contact #kontakt form #inp-email {
+.Contactt .kontakt form #inp-email {
   width: 100%;
   height: 2rem;
   margin-bottom: 1rem;
   background-color: white;
   border: 1px solid #191919;
 }
-.Contact #kontakt form #inp-textarea {
+.Contactt .kontakt form #inp-textarea {
   width: 100%;
   height: 20%;
   margin-bottom: 1rem;
   background-color: rgb(255, 255, 255);
   border: 1px solid #191919;
 }
-.Contact #kontakt form input::-moz-placeholder {
+.Contactt .kontakt form input::-moz-placeholder {
   color: #393939;
   padding-left: 0.8rem;
   font-family: "Ubuntu", sans-serif;
 }
-.Contact #kontakt form input::placeholder {
+.Contactt .kontakt form input::placeholder {
   color: #393939;
   padding-left: 0.8rem;
   font-family: "Ubuntu", sans-serif;
 }
-.Contact #kontakt form textarea::-moz-placeholder {
+.Contactt .kontakt form textarea::-moz-placeholder {
   padding-top: 0.8rem;
   color: #393939;
   padding-left: 0.8rem;
   font-family: "Ubuntu", sans-serif;
 }
-.Contact #kontakt form textarea::placeholder {
+.Contactt .kontakt form textarea::placeholder {
   padding-top: 0.8rem;
   color: #393939;
   padding-left: 0.8rem;
   font-family: "Ubuntu", sans-serif;
 }
-.Contact #kontakt form #inp-submit {
+.Contactt .kontakt form #inp-submit {
   padding: 0 2rem;
   height: 3rem;
   background-color: #ababab;
   font-family: "Russo One", sans-serif;
   font-size: 1.5rem;
 }
-.Contact #info {
+.Contactt .kontakt2 {
   width: 50%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.Contact #info2 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.Contactt .kontakt2 p {
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -196,7 +240,7 @@ section h2 {
     width: 49%;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
   #hero {
     padding: 3%;
   }
@@ -207,25 +251,28 @@ section h2 {
   #hero #inner-hero #about-to-contact {
     width: 100%;
   }
+  .Contactt .kontakt2 p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
   #services #services-flex {
     flex-direction: column;
   }
   #services #services-flex .service-box {
     width: 100%;
   }
-  #projects #projects-flex div {
-    width: 100%;
+  #projects #projects-flex {
+    flex-direction: column;
   }
-  .Contact {
+  .Contactt {
     flex-direction: column;
     align-items: center;
   }
-  .Contact #kontakt {
+  .Contactt .kontakt {
     width: 100%;
   }
-  .Contact #info {
-    justify-content: center;
-    text-align: center;
+  .Contactt .kontakt2 {
     width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
